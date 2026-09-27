@@ -1,0 +1,1 @@
+package com.letstudy.backend.repository; import com.letstudy.backend.model.QuizResult; import org.springframework.data.jpa.repository.JpaRepository; public interface QuizResultRepository extends JpaRepository<QuizResult,Long>{}

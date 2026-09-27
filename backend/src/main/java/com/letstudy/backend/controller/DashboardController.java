@@ -1,0 +1,3 @@
+package com.letstudy.backend.controller;
+import com.letstudy.backend.repository.*; import org.springframework.web.bind.annotation.*; import java.util.Map;
+@RestController @RequestMapping("/api/dashboard") public class DashboardController {private final SubjectRepository s;private final TopicRepository t;private final LessonRepository l;private final QuestionRepository q;public DashboardController(SubjectRepository s,TopicRepository t,LessonRepository l,QuestionRepository q){this.s=s;this.t=t;this.l=l;this.q=q;}@GetMapping("/stats") public Map<String,Long> stats(){return Map.of("subjects",s.count(),"topics",t.count(),"lessons",l.count(),"questions",q.count());}}

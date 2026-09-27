@@ -1,0 +1,1 @@
+package com.letstudy.backend.repository; import com.letstudy.backend.model.Lesson; import com.letstudy.backend.model.Topic; import java.util.List; import org.springframework.data.jpa.repository.JpaRepository; public interface LessonRepository extends JpaRepository<Lesson,Long>{List<Lesson> findByTopic(Topic topic);}
